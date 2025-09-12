@@ -1,0 +1,577 @@
+2025-09-11 21:07:13 | INFO | Message interval: 3 seconds
+2025-09-11 21:07:13 | INFO | {'message': 'I just saw an app! It was exciting.', 'author': 'Bob'}
+2025-09-11 21:07:16 | INFO | {'message': 'I just shared an app! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:07:19 | INFO | {'message': 'I just found an app! It was exciting.', 'author': 'Eve'}
+2025-09-11 21:07:22 | INFO | {'message': 'I just found a meme! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:07:25 | INFO | {'message': 'I just loved a trick! It was boring.', 'author': 'Alice'}
+2025-09-11 21:07:28 | INFO | {'message': 'I just shared a trick! It was funny.', 'author': 'Bob'}
+2025-09-11 21:07:31 | INFO | {'message': 'I just found a meme! It was funny.', 'author': 'Bob'}
+2025-09-11 21:07:34 | INFO | {'message': 'I just tried a movie! It was amazing.', 'author': 'Alice'}
+2025-09-11 21:07:36 | INFO | Logging to file: logs/project_log.log
+2025-09-11 21:07:36 | INFO | Log sanitization enabled, personal info removed
+2025-09-11 21:07:36 | INFO | Project root: PROJECT_ROOT
+2025-09-11 21:07:36 | INFO | Data folder: PROJECT_ROOT/data
+2025-09-11 21:07:36 | INFO | Data file: PROJECT_ROOT/data/buzz_live.json
+2025-09-11 21:07:36 | INFO | START consumer.
+2025-09-11 21:07:37 | INFO | {'message': 'I just found a story! It was exciting.', 'author': 'Bob'}
+2025-09-11 21:07:37 | INFO | Processed JSON message: {'message': 'I just found a story! It was exciting.', 'author': 'Bob'}
+2025-09-11 21:07:37 | INFO | Message received from author: Bob
+2025-09-11 21:07:37 | INFO | Updated author counts: {'Bob': 1}
+2025-09-11 21:07:37 | INFO | Chart updated successfully for message: {"message": "I just found a story! It was exciting.", "author": "Bob"}
+
+2025-09-11 21:07:40 | INFO | {'message': 'I just loved a meme! It was boring.', 'author': 'Eve'}
+2025-09-11 21:07:40 | INFO | Processed JSON message: {'message': 'I just loved a meme! It was boring.', 'author': 'Eve'}
+2025-09-11 21:07:40 | INFO | Message received from author: Eve
+2025-09-11 21:07:40 | INFO | Updated author counts: {'Bob': 1, 'Eve': 1}
+2025-09-11 21:07:40 | INFO | Chart updated successfully for message: {"message": "I just loved a meme! It was boring.", "author": "Eve"}
+
+2025-09-11 21:07:45 | INFO | {'message': 'I just saw a trick! It was exciting.', 'author': 'Bob'}
+2025-09-11 21:07:45 | INFO | Processed JSON message: {'message': 'I just saw a trick! It was exciting.', 'author': 'Bob'}
+2025-09-11 21:07:45 | INFO | Message received from author: Bob
+2025-09-11 21:07:45 | INFO | Updated author counts: {'Bob': 2, 'Eve': 1}
+2025-09-11 21:07:45 | INFO | Chart updated successfully for message: {"message": "I just saw a trick! It was exciting.", "author": "Bob"}
+
+2025-09-11 21:07:48 | INFO | {'message': 'I just shared a meme! It was boring.', 'author': 'Bob'}
+2025-09-11 21:07:48 | INFO | Processed JSON message: {'message': 'I just shared a meme! It was boring.', 'author': 'Bob'}
+2025-09-11 21:07:48 | INFO | Message received from author: Bob
+2025-09-11 21:07:48 | INFO | Updated author counts: {'Bob': 3, 'Eve': 1}
+2025-09-11 21:07:48 | INFO | Chart updated successfully for message: {"message": "I just shared a meme! It was boring.", "author": "Bob"}
+
+2025-09-11 21:07:51 | INFO | {'message': 'I just saw a trick! It was boring.', 'author': 'Eve'}
+2025-09-11 21:07:51 | INFO | Processed JSON message: {'message': 'I just saw a trick! It was boring.', 'author': 'Eve'}
+2025-09-11 21:07:51 | INFO | Message received from author: Eve
+2025-09-11 21:07:51 | INFO | Updated author counts: {'Bob': 3, 'Eve': 2}
+2025-09-11 21:07:51 | INFO | Chart updated successfully for message: {"message": "I just saw a trick! It was boring.", "author": "Eve"}
+
+2025-09-11 21:07:54 | INFO | {'message': 'I just saw a trick! It was weird.', 'author': 'Bob'}
+2025-09-11 21:07:54 | INFO | Processed JSON message: {'message': 'I just saw a trick! It was weird.', 'author': 'Bob'}
+2025-09-11 21:07:54 | INFO | Message received from author: Bob
+2025-09-11 21:07:54 | INFO | Updated author counts: {'Bob': 4, 'Eve': 2}
+2025-09-11 21:07:54 | INFO | Chart updated successfully for message: {"message": "I just saw a trick! It was weird.", "author": "Bob"}
+
+2025-09-11 21:07:57 | INFO | {'message': 'I just shared a story! It was weird.', 'author': 'Eve'}
+2025-09-11 21:07:57 | INFO | Processed JSON message: {'message': 'I just shared a story! It was weird.', 'author': 'Eve'}
+2025-09-11 21:07:57 | INFO | Message received from author: Eve
+2025-09-11 21:07:57 | INFO | Updated author counts: {'Bob': 4, 'Eve': 3}
+2025-09-11 21:07:57 | INFO | Chart updated successfully for message: {"message": "I just shared a story! It was weird.", "author": "Eve"}
+
+2025-09-11 21:08:00 | INFO | {'message': 'I just tried a meme! It was amazing.', 'author': 'Alice'}
+2025-09-11 21:08:00 | INFO | Processed JSON message: {'message': 'I just tried a meme! It was amazing.', 'author': 'Alice'}
+2025-09-11 21:08:00 | INFO | Message received from author: Alice
+2025-09-11 21:08:00 | INFO | Updated author counts: {'Bob': 4, 'Eve': 3, 'Alice': 1}
+2025-09-11 21:08:00 | INFO | Chart updated successfully for message: {"message": "I just tried a meme! It was amazing.", "author": "Alice"}
+
+2025-09-11 21:08:03 | INFO | {'message': 'I just tried a meme! It was amazing.', 'author': 'Alice'}
+2025-09-11 21:08:03 | INFO | Processed JSON message: {'message': 'I just tried a meme! It was amazing.', 'author': 'Alice'}
+2025-09-11 21:08:03 | INFO | Message received from author: Alice
+2025-09-11 21:08:03 | INFO | Updated author counts: {'Bob': 4, 'Eve': 3, 'Alice': 2}
+2025-09-11 21:08:04 | INFO | Chart updated successfully for message: {"message": "I just tried a meme! It was amazing.", "author": "Alice"}
+
+2025-09-11 21:08:06 | INFO | {'message': 'I just shared a story! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:08:06 | INFO | Processed JSON message: {'message': 'I just shared a story! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:08:06 | INFO | Message received from author: Charlie
+2025-09-11 21:08:06 | INFO | Updated author counts: {'Bob': 4, 'Eve': 3, 'Alice': 2, 'Charlie': 1}
+2025-09-11 21:08:06 | INFO | Chart updated successfully for message: {"message": "I just shared a story! It was amazing.", "author": "Charlie"}
+
+2025-09-11 21:08:09 | INFO | {'message': 'I just loved a meme! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:08:09 | INFO | Processed JSON message: {'message': 'I just loved a meme! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:08:09 | INFO | Message received from author: Charlie
+2025-09-11 21:08:09 | INFO | Updated author counts: {'Bob': 4, 'Eve': 3, 'Alice': 2, 'Charlie': 2}
+2025-09-11 21:08:09 | INFO | Chart updated successfully for message: {"message": "I just loved a meme! It was weird.", "author": "Charlie"}
+
+2025-09-11 21:08:12 | INFO | {'message': 'I just saw a meme! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:08:12 | INFO | Processed JSON message: {'message': 'I just saw a meme! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:08:12 | INFO | Message received from author: Charlie
+2025-09-11 21:08:12 | INFO | Updated author counts: {'Bob': 4, 'Eve': 3, 'Alice': 2, 'Charlie': 3}
+2025-09-11 21:08:12 | INFO | Chart updated successfully for message: {"message": "I just saw a meme! It was amazing.", "author": "Charlie"}
+
+2025-09-11 21:08:15 | INFO | {'message': 'I just saw an app! It was amazing.', 'author': 'Eve'}
+2025-09-11 21:08:15 | INFO | Processed JSON message: {'message': 'I just saw an app! It was amazing.', 'author': 'Eve'}
+2025-09-11 21:08:15 | INFO | Message received from author: Eve
+2025-09-11 21:08:15 | INFO | Updated author counts: {'Bob': 4, 'Eve': 4, 'Alice': 2, 'Charlie': 3}
+2025-09-11 21:08:16 | INFO | Chart updated successfully for message: {"message": "I just saw an app! It was amazing.", "author": "Eve"}
+
+2025-09-11 21:08:20 | INFO | {'message': 'I just found an app! It was boring.', 'author': 'Eve'}
+2025-09-11 21:08:20 | INFO | Processed JSON message: {'message': 'I just found an app! It was boring.', 'author': 'Eve'}
+2025-09-11 21:08:20 | INFO | Message received from author: Eve
+2025-09-11 21:08:20 | INFO | Updated author counts: {'Bob': 4, 'Eve': 5, 'Alice': 2, 'Charlie': 3}
+2025-09-11 21:08:20 | INFO | Chart updated successfully for message: {"message": "I just found an app! It was boring.", "author": "Eve"}
+
+2025-09-11 21:08:23 | INFO | {'message': 'I just tried a movie! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:08:23 | INFO | Processed JSON message: {'message': 'I just tried a movie! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:08:23 | INFO | Message received from author: Charlie
+2025-09-11 21:08:23 | INFO | Updated author counts: {'Bob': 4, 'Eve': 5, 'Alice': 2, 'Charlie': 4}
+2025-09-11 21:08:23 | INFO | Chart updated successfully for message: {"message": "I just tried a movie! It was amazing.", "author": "Charlie"}
+
+2025-09-11 21:08:26 | INFO | {'message': 'I just tried a story! It was boring.', 'author': 'Alice'}
+2025-09-11 21:08:26 | INFO | Processed JSON message: {'message': 'I just tried a story! It was boring.', 'author': 'Alice'}
+2025-09-11 21:08:26 | INFO | Message received from author: Alice
+2025-09-11 21:08:26 | INFO | Updated author counts: {'Bob': 4, 'Eve': 5, 'Alice': 3, 'Charlie': 4}
+2025-09-11 21:08:27 | INFO | Chart updated successfully for message: {"message": "I just tried a story! It was boring.", "author": "Alice"}
+
+2025-09-11 21:08:29 | INFO | {'message': 'I just shared a movie! It was funny.', 'author': 'Alice'}
+2025-09-11 21:08:30 | INFO | Processed JSON message: {'message': 'I just shared a movie! It was funny.', 'author': 'Alice'}
+2025-09-11 21:08:30 | INFO | Message received from author: Alice
+2025-09-11 21:08:30 | INFO | Updated author counts: {'Bob': 4, 'Eve': 5, 'Alice': 4, 'Charlie': 4}
+2025-09-11 21:08:30 | INFO | Chart updated successfully for message: {"message": "I just shared a movie! It was funny.", "author": "Alice"}
+
+2025-09-11 21:08:32 | INFO | {'message': 'I just found a meme! It was weird.', 'author': 'Eve'}
+2025-09-11 21:08:33 | INFO | Processed JSON message: {'message': 'I just found a meme! It was weird.', 'author': 'Eve'}
+2025-09-11 21:08:33 | INFO | Message received from author: Eve
+2025-09-11 21:08:33 | INFO | Updated author counts: {'Bob': 4, 'Eve': 6, 'Alice': 4, 'Charlie': 4}
+2025-09-11 21:08:33 | INFO | Chart updated successfully for message: {"message": "I just found a meme! It was weird.", "author": "Eve"}
+
+2025-09-11 21:08:35 | INFO | {'message': 'I just tried a trick! It was weird.', 'author': 'Alice'}
+2025-09-11 21:08:35 | INFO | Processed JSON message: {'message': 'I just tried a trick! It was weird.', 'author': 'Alice'}
+2025-09-11 21:08:35 | INFO | Message received from author: Alice
+2025-09-11 21:08:35 | INFO | Updated author counts: {'Bob': 4, 'Eve': 6, 'Alice': 5, 'Charlie': 4}
+2025-09-11 21:08:35 | INFO | Chart updated successfully for message: {"message": "I just tried a trick! It was weird.", "author": "Alice"}
+
+2025-09-11 21:08:38 | INFO | {'message': 'I just found a movie! It was weird.', 'author': 'Alice'}
+2025-09-11 21:08:38 | INFO | Processed JSON message: {'message': 'I just found a movie! It was weird.', 'author': 'Alice'}
+2025-09-11 21:08:38 | INFO | Message received from author: Alice
+2025-09-11 21:08:38 | INFO | Updated author counts: {'Bob': 4, 'Eve': 6, 'Alice': 6, 'Charlie': 4}
+2025-09-11 21:08:39 | INFO | Chart updated successfully for message: {"message": "I just found a movie! It was weird.", "author": "Alice"}
+
+2025-09-11 21:08:41 | INFO | {'message': 'I just shared an app! It was exciting.', 'author': 'Alice'}
+2025-09-11 21:08:42 | INFO | Processed JSON message: {'message': 'I just shared an app! It was exciting.', 'author': 'Alice'}
+2025-09-11 21:08:42 | INFO | Message received from author: Alice
+2025-09-11 21:08:42 | INFO | Updated author counts: {'Bob': 4, 'Eve': 6, 'Alice': 7, 'Charlie': 4}
+2025-09-11 21:08:42 | INFO | Chart updated successfully for message: {"message": "I just shared an app! It was exciting.", "author": "Alice"}
+
+2025-09-11 21:08:44 | INFO | {'message': 'I just shared a story! It was boring.', 'author': 'Bob'}
+2025-09-11 21:08:45 | INFO | Processed JSON message: {'message': 'I just shared a story! It was boring.', 'author': 'Bob'}
+2025-09-11 21:08:45 | INFO | Message received from author: Bob
+2025-09-11 21:08:45 | INFO | Updated author counts: {'Bob': 5, 'Eve': 6, 'Alice': 7, 'Charlie': 4}
+2025-09-11 21:08:45 | INFO | Chart updated successfully for message: {"message": "I just shared a story! It was boring.", "author": "Bob"}
+
+2025-09-11 21:08:47 | INFO | {'message': 'I just tried a story! It was weird.', 'author': 'Eve'}
+2025-09-11 21:08:47 | INFO | Processed JSON message: {'message': 'I just tried a story! It was weird.', 'author': 'Eve'}
+2025-09-11 21:08:47 | INFO | Message received from author: Eve
+2025-09-11 21:08:47 | INFO | Updated author counts: {'Bob': 5, 'Eve': 7, 'Alice': 7, 'Charlie': 4}
+2025-09-11 21:08:47 | INFO | Chart updated successfully for message: {"message": "I just tried a story! It was weird.", "author": "Eve"}
+
+2025-09-11 21:08:50 | INFO | {'message': 'I just shared a story! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:08:50 | INFO | Processed JSON message: {'message': 'I just shared a story! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:08:50 | INFO | Message received from author: Charlie
+2025-09-11 21:08:50 | INFO | Updated author counts: {'Bob': 5, 'Eve': 7, 'Alice': 7, 'Charlie': 5}
+2025-09-11 21:08:50 | INFO | Chart updated successfully for message: {"message": "I just shared a story! It was boring.", "author": "Charlie"}
+
+2025-09-11 21:08:53 | INFO | {'message': 'I just saw a story! It was weird.', 'author': 'Alice'}
+2025-09-11 21:08:53 | INFO | Processed JSON message: {'message': 'I just saw a story! It was weird.', 'author': 'Alice'}
+2025-09-11 21:08:53 | INFO | Message received from author: Alice
+2025-09-11 21:08:53 | INFO | Updated author counts: {'Bob': 5, 'Eve': 7, 'Alice': 8, 'Charlie': 5}
+2025-09-11 21:08:54 | INFO | Chart updated successfully for message: {"message": "I just saw a story! It was weird.", "author": "Alice"}
+
+2025-09-11 21:08:56 | INFO | {'message': 'I just found a story! It was funny.', 'author': 'Eve'}
+2025-09-11 21:08:57 | INFO | Processed JSON message: {'message': 'I just found a story! It was funny.', 'author': 'Eve'}
+2025-09-11 21:08:57 | INFO | Message received from author: Eve
+2025-09-11 21:08:57 | INFO | Updated author counts: {'Bob': 5, 'Eve': 8, 'Alice': 8, 'Charlie': 5}
+2025-09-11 21:08:57 | INFO | Chart updated successfully for message: {"message": "I just found a story! It was funny.", "author": "Eve"}
+
+2025-09-11 21:08:59 | INFO | {'message': 'I just found an app! It was funny.', 'author': 'Charlie'}
+2025-09-11 21:09:00 | INFO | Processed JSON message: {'message': 'I just found an app! It was funny.', 'author': 'Charlie'}
+2025-09-11 21:09:00 | INFO | Message received from author: Charlie
+2025-09-11 21:09:00 | INFO | Updated author counts: {'Bob': 5, 'Eve': 8, 'Alice': 8, 'Charlie': 6}
+2025-09-11 21:09:00 | INFO | Chart updated successfully for message: {"message": "I just found an app! It was funny.", "author": "Charlie"}
+
+2025-09-11 21:09:02 | INFO | {'message': 'I just found a meme! It was funny.', 'author': 'Alice'}
+2025-09-11 21:09:02 | INFO | Processed JSON message: {'message': 'I just found a meme! It was funny.', 'author': 'Alice'}
+2025-09-11 21:09:02 | INFO | Message received from author: Alice
+2025-09-11 21:09:02 | INFO | Updated author counts: {'Bob': 5, 'Eve': 8, 'Alice': 9, 'Charlie': 6}
+2025-09-11 21:09:02 | INFO | Chart updated successfully for message: {"message": "I just found a meme! It was funny.", "author": "Alice"}
+
+2025-09-11 21:09:05 | INFO | {'message': 'I just found a trick! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:09:05 | INFO | Processed JSON message: {'message': 'I just found a trick! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:09:05 | INFO | Message received from author: Charlie
+2025-09-11 21:09:05 | INFO | Updated author counts: {'Bob': 5, 'Eve': 8, 'Alice': 9, 'Charlie': 7}
+2025-09-11 21:09:06 | INFO | Chart updated successfully for message: {"message": "I just found a trick! It was weird.", "author": "Charlie"}
+
+2025-09-11 21:09:10 | INFO | {'message': 'I just tried a movie! It was funny.', 'author': 'Charlie'}
+2025-09-11 21:09:11 | INFO | Processed JSON message: {'message': 'I just tried a movie! It was funny.', 'author': 'Charlie'}
+2025-09-11 21:09:11 | INFO | Message received from author: Charlie
+2025-09-11 21:09:11 | INFO | Updated author counts: {'Bob': 5, 'Eve': 8, 'Alice': 9, 'Charlie': 8}
+2025-09-11 21:09:11 | INFO | Chart updated successfully for message: {"message": "I just tried a movie! It was funny.", "author": "Charlie"}
+
+2025-09-11 21:09:13 | INFO | {'message': 'I just shared a movie! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:09:14 | INFO | Processed JSON message: {'message': 'I just shared a movie! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:09:14 | INFO | Message received from author: Charlie
+2025-09-11 21:09:14 | INFO | Updated author counts: {'Bob': 5, 'Eve': 8, 'Alice': 9, 'Charlie': 9}
+2025-09-11 21:09:14 | INFO | Chart updated successfully for message: {"message": "I just shared a movie! It was boring.", "author": "Charlie"}
+
+2025-09-11 21:09:16 | INFO | {'message': 'I just tried an app! It was exciting.', 'author': 'Eve'}
+2025-09-11 21:09:16 | INFO | Processed JSON message: {'message': 'I just tried an app! It was exciting.', 'author': 'Eve'}
+2025-09-11 21:09:17 | INFO | Message received from author: Eve
+2025-09-11 21:09:17 | INFO | Updated author counts: {'Bob': 5, 'Eve': 9, 'Alice': 9, 'Charlie': 9}
+2025-09-11 21:09:17 | INFO | Chart updated successfully for message: {"message": "I just tried an app! It was exciting.", "author": "Eve"}
+
+2025-09-11 21:09:19 | INFO | {'message': 'I just shared a movie! It was weird.', 'author': 'Bob'}
+2025-09-11 21:09:20 | INFO | Processed JSON message: {'message': 'I just shared a movie! It was weird.', 'author': 'Bob'}
+2025-09-11 21:09:20 | INFO | Message received from author: Bob
+2025-09-11 21:09:20 | INFO | Updated author counts: {'Bob': 6, 'Eve': 9, 'Alice': 9, 'Charlie': 9}
+2025-09-11 21:09:20 | INFO | Chart updated successfully for message: {"message": "I just shared a movie! It was weird.", "author": "Bob"}
+
+2025-09-11 21:09:22 | INFO | Consumer interrupted by user.
+2025-09-11 21:09:22 | INFO | Consumer closed.
+2025-09-11 21:09:22 | WARNING | Producer interrupted by user.
+2025-09-11 21:09:22 | INFO | Producer shutting down.
+2025-09-11 21:12:04 | INFO | Logging to file: logs/project_log.log
+2025-09-11 21:12:04 | INFO | Log sanitization enabled, personal info removed
+2025-09-11 21:12:04 | INFO | Project root: PROJECT_ROOT
+2025-09-11 21:12:04 | INFO | Data folder: PROJECT_ROOT/data
+2025-09-11 21:12:04 | INFO | Data file: PROJECT_ROOT/data/buzz_live.json
+2025-09-11 21:12:04 | INFO | START producer...
+2025-09-11 21:12:04 | INFO | Hit CTRL c (or CMD c) to close.
+2025-09-11 21:12:04 | INFO | Message interval: 3 seconds
+2025-09-11 21:12:04 | INFO | {'message': 'I just loved a trick! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:12:07 | INFO | {'message': 'I just shared a story! It was boring.', 'author': 'Eve'}
+2025-09-11 21:12:10 | INFO | {'message': 'I just found a meme! It was boring.', 'author': 'Eve'}
+2025-09-11 21:12:13 | INFO | {'message': 'I just tried an app! It was exciting.', 'author': 'Eve'}
+2025-09-11 21:12:16 | INFO | {'message': 'I just shared a trick! It was weird.', 'author': 'Alice'}
+2025-09-11 21:12:19 | INFO | {'message': 'I just found a trick! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:12:21 | INFO | Logging to file: logs/project_log.log
+2025-09-11 21:12:21 | INFO | Log sanitization enabled, personal info removed
+2025-09-11 21:12:21 | INFO | Project root: PROJECT_ROOT
+2025-09-11 21:12:21 | INFO | Data folder: PROJECT_ROOT/data
+2025-09-11 21:12:21 | INFO | Data file: PROJECT_ROOT/data/buzz_live.json
+2025-09-11 21:12:21 | INFO | START consumer.
+2025-09-11 21:12:22 | INFO | {'message': 'I just shared a movie! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:12:23 | INFO | Processed JSON message: {'message': 'I just shared a movie! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:12:23 | INFO | Message received from author: Charlie
+2025-09-11 21:12:23 | INFO | Updated author counts: {'Charlie': 1}
+2025-09-11 21:12:23 | INFO | Chart updated successfully for message: {"message": "I just shared a movie! It was boring.", "author": "Charlie"}
+
+2025-09-11 21:12:25 | INFO | {'message': 'I just found a meme! It was weird.', 'author': 'Eve'}
+2025-09-11 21:12:25 | INFO | Processed JSON message: {'message': 'I just found a meme! It was weird.', 'author': 'Eve'}
+2025-09-11 21:12:25 | INFO | Message received from author: Eve
+2025-09-11 21:12:25 | INFO | Updated author counts: {'Charlie': 1, 'Eve': 1}
+2025-09-11 21:12:25 | INFO | Chart updated successfully for message: {"message": "I just found a meme! It was weird.", "author": "Eve"}
+
+2025-09-11 21:12:28 | INFO | {'message': 'I just found a trick! It was funny.', 'author': 'Eve'}
+2025-09-11 21:12:28 | INFO | Processed JSON message: {'message': 'I just found a trick! It was funny.', 'author': 'Eve'}
+2025-09-11 21:12:28 | INFO | Message received from author: Eve
+2025-09-11 21:12:28 | INFO | Updated author counts: {'Charlie': 1, 'Eve': 2}
+2025-09-11 21:12:29 | INFO | Chart updated successfully for message: {"message": "I just found a trick! It was funny.", "author": "Eve"}
+
+2025-09-11 21:12:31 | INFO | {'message': 'I just tried a meme! It was boring.', 'author': 'Eve'}
+2025-09-11 21:12:32 | INFO | Processed JSON message: {'message': 'I just tried a meme! It was boring.', 'author': 'Eve'}
+2025-09-11 21:12:32 | INFO | Message received from author: Eve
+2025-09-11 21:12:32 | INFO | Updated author counts: {'Charlie': 1, 'Eve': 3}
+2025-09-11 21:12:32 | INFO | Chart updated successfully for message: {"message": "I just tried a meme! It was boring.", "author": "Eve"}
+
+2025-09-11 21:12:36 | INFO | {'message': 'I just found a story! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:12:36 | INFO | Processed JSON message: {'message': 'I just found a story! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:12:36 | INFO | Message received from author: Charlie
+2025-09-11 21:12:36 | INFO | Updated author counts: {'Charlie': 2, 'Eve': 3}
+2025-09-11 21:12:37 | INFO | Chart updated successfully for message: {"message": "I just found a story! It was amazing.", "author": "Charlie"}
+
+2025-09-11 21:12:39 | INFO | {'message': 'I just loved a meme! It was boring.', 'author': 'Bob'}
+2025-09-11 21:12:40 | INFO | Processed JSON message: {'message': 'I just loved a meme! It was boring.', 'author': 'Bob'}
+2025-09-11 21:12:40 | INFO | Message received from author: Bob
+2025-09-11 21:12:40 | INFO | Updated author counts: {'Charlie': 2, 'Eve': 3, 'Bob': 1}
+2025-09-11 21:12:40 | INFO | Chart updated successfully for message: {"message": "I just loved a meme! It was boring.", "author": "Bob"}
+
+2025-09-11 21:12:42 | INFO | {'message': 'I just tried a meme! It was boring.', 'author': 'Bob'}
+2025-09-11 21:12:43 | INFO | Processed JSON message: {'message': 'I just tried a meme! It was boring.', 'author': 'Bob'}
+2025-09-11 21:12:43 | INFO | Message received from author: Bob
+2025-09-11 21:12:43 | INFO | Updated author counts: {'Charlie': 2, 'Eve': 3, 'Bob': 2}
+2025-09-11 21:12:43 | INFO | Chart updated successfully for message: {"message": "I just tried a meme! It was boring.", "author": "Bob"}
+
+2025-09-11 21:12:45 | INFO | {'message': 'I just shared a movie! It was exciting.', 'author': 'Bob'}
+2025-09-11 21:12:46 | INFO | Processed JSON message: {'message': 'I just shared a movie! It was exciting.', 'author': 'Bob'}
+2025-09-11 21:12:46 | INFO | Message received from author: Bob
+2025-09-11 21:12:46 | INFO | Updated author counts: {'Charlie': 2, 'Eve': 3, 'Bob': 3}
+2025-09-11 21:12:46 | INFO | Chart updated successfully for message: {"message": "I just shared a movie! It was exciting.", "author": "Bob"}
+
+2025-09-11 21:12:48 | INFO | {'message': 'I just found a meme! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:12:49 | INFO | Processed JSON message: {'message': 'I just found a meme! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:12:49 | INFO | Message received from author: Bob
+2025-09-11 21:12:49 | INFO | Updated author counts: {'Charlie': 2, 'Eve': 3, 'Bob': 4}
+2025-09-11 21:12:49 | INFO | Chart updated successfully for message: {"message": "I just found a meme! It was amazing.", "author": "Bob"}
+
+2025-09-11 21:12:51 | INFO | {'message': 'I just loved an app! It was amazing.', 'author': 'Alice'}
+2025-09-11 21:12:52 | INFO | Processed JSON message: {'message': 'I just loved an app! It was amazing.', 'author': 'Alice'}
+2025-09-11 21:12:52 | INFO | Message received from author: Alice
+2025-09-11 21:12:52 | INFO | Updated author counts: {'Charlie': 2, 'Eve': 3, 'Bob': 4, 'Alice': 1}
+2025-09-11 21:12:52 | INFO | Chart updated successfully for message: {"message": "I just loved an app! It was amazing.", "author": "Alice"}
+
+2025-09-11 21:12:54 | INFO | {'message': 'I just tried a movie! It was boring.', 'author': 'Alice'}
+2025-09-11 21:12:55 | INFO | Processed JSON message: {'message': 'I just tried a movie! It was boring.', 'author': 'Alice'}
+2025-09-11 21:12:55 | INFO | Message received from author: Alice
+2025-09-11 21:12:55 | INFO | Updated author counts: {'Charlie': 2, 'Eve': 3, 'Bob': 4, 'Alice': 2}
+2025-09-11 21:12:55 | INFO | Chart updated successfully for message: {"message": "I just tried a movie! It was boring.", "author": "Alice"}
+
+2025-09-11 21:12:57 | INFO | {'message': 'I just shared a story! It was boring.', 'author': 'Eve'}
+2025-09-11 21:12:58 | INFO | Processed JSON message: {'message': 'I just shared a story! It was boring.', 'author': 'Eve'}
+2025-09-11 21:12:58 | INFO | Message received from author: Eve
+2025-09-11 21:12:58 | INFO | Updated author counts: {'Charlie': 2, 'Eve': 4, 'Bob': 4, 'Alice': 2}
+2025-09-11 21:12:58 | INFO | Chart updated successfully for message: {"message": "I just shared a story! It was boring.", "author": "Eve"}
+
+2025-09-11 21:13:00 | INFO | {'message': 'I just saw a story! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:13:01 | INFO | Processed JSON message: {'message': 'I just saw a story! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:13:01 | INFO | Message received from author: Bob
+2025-09-11 21:13:01 | INFO | Updated author counts: {'Charlie': 2, 'Eve': 4, 'Bob': 5, 'Alice': 2}
+2025-09-11 21:13:01 | INFO | Chart updated successfully for message: {"message": "I just saw a story! It was amazing.", "author": "Bob"}
+
+2025-09-11 21:13:03 | INFO | {'message': 'I just loved a story! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:13:04 | INFO | Processed JSON message: {'message': 'I just loved a story! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:13:04 | INFO | Message received from author: Charlie
+2025-09-11 21:13:04 | INFO | Updated author counts: {'Charlie': 3, 'Eve': 4, 'Bob': 5, 'Alice': 2}
+2025-09-11 21:13:04 | INFO | Chart updated successfully for message: {"message": "I just loved a story! It was weird.", "author": "Charlie"}
+
+2025-09-11 21:13:07 | INFO | {'message': 'I just loved a trick! It was boring.', 'author': 'Eve'}
+2025-09-11 21:13:07 | INFO | Processed JSON message: {'message': 'I just loved a trick! It was boring.', 'author': 'Eve'}
+2025-09-11 21:13:07 | INFO | Message received from author: Eve
+2025-09-11 21:13:07 | INFO | Updated author counts: {'Charlie': 3, 'Eve': 5, 'Bob': 5, 'Alice': 2}
+2025-09-11 21:13:07 | INFO | Chart updated successfully for message: {"message": "I just loved a trick! It was boring.", "author": "Eve"}
+
+2025-09-11 21:13:12 | INFO | {'message': 'I just found a story! It was funny.', 'author': 'Alice'}
+2025-09-11 21:13:12 | INFO | Processed JSON message: {'message': 'I just found a story! It was funny.', 'author': 'Alice'}
+2025-09-11 21:13:12 | INFO | Message received from author: Alice
+2025-09-11 21:13:12 | INFO | Updated author counts: {'Charlie': 3, 'Eve': 5, 'Bob': 5, 'Alice': 3}
+2025-09-11 21:13:12 | INFO | Chart updated successfully for message: {"message": "I just found a story! It was funny.", "author": "Alice"}
+
+2025-09-11 21:13:15 | INFO | {'message': 'I just tried an app! It was funny.', 'author': 'Charlie'}
+2025-09-11 21:13:15 | INFO | Processed JSON message: {'message': 'I just tried an app! It was funny.', 'author': 'Charlie'}
+2025-09-11 21:13:15 | INFO | Message received from author: Charlie
+2025-09-11 21:13:15 | INFO | Updated author counts: {'Charlie': 4, 'Eve': 5, 'Bob': 5, 'Alice': 3}
+2025-09-11 21:13:15 | INFO | Chart updated successfully for message: {"message": "I just tried an app! It was funny.", "author": "Charlie"}
+
+2025-09-11 21:13:18 | INFO | {'message': 'I just found a movie! It was weird.', 'author': 'Alice'}
+2025-09-11 21:13:18 | INFO | Processed JSON message: {'message': 'I just found a movie! It was weird.', 'author': 'Alice'}
+2025-09-11 21:13:18 | INFO | Message received from author: Alice
+2025-09-11 21:13:18 | INFO | Updated author counts: {'Charlie': 4, 'Eve': 5, 'Bob': 5, 'Alice': 4}
+2025-09-11 21:13:18 | INFO | Chart updated successfully for message: {"message": "I just found a movie! It was weird.", "author": "Alice"}
+
+2025-09-11 21:13:21 | INFO | {'message': 'I just tried a trick! It was weird.', 'author': 'Alice'}
+2025-09-11 21:13:21 | INFO | Processed JSON message: {'message': 'I just tried a trick! It was weird.', 'author': 'Alice'}
+2025-09-11 21:13:21 | INFO | Message received from author: Alice
+2025-09-11 21:13:21 | INFO | Updated author counts: {'Charlie': 4, 'Eve': 5, 'Bob': 5, 'Alice': 5}
+2025-09-11 21:13:21 | INFO | Chart updated successfully for message: {"message": "I just tried a trick! It was weird.", "author": "Alice"}
+
+2025-09-11 21:13:24 | INFO | {'message': 'I just saw a story! It was funny.', 'author': 'Bob'}
+2025-09-11 21:13:24 | INFO | Processed JSON message: {'message': 'I just saw a story! It was funny.', 'author': 'Bob'}
+2025-09-11 21:13:24 | INFO | Message received from author: Bob
+2025-09-11 21:13:24 | INFO | Updated author counts: {'Charlie': 4, 'Eve': 5, 'Bob': 6, 'Alice': 5}
+2025-09-11 21:13:24 | INFO | Chart updated successfully for message: {"message": "I just saw a story! It was funny.", "author": "Bob"}
+
+2025-09-11 21:13:27 | INFO | {'message': 'I just shared a movie! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:13:27 | INFO | Processed JSON message: {'message': 'I just shared a movie! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:13:27 | INFO | Message received from author: Charlie
+2025-09-11 21:13:27 | INFO | Updated author counts: {'Charlie': 5, 'Eve': 5, 'Bob': 6, 'Alice': 5}
+2025-09-11 21:13:27 | INFO | Chart updated successfully for message: {"message": "I just shared a movie! It was boring.", "author": "Charlie"}
+
+2025-09-11 21:13:30 | INFO | {'message': 'I just shared a meme! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:13:30 | INFO | Processed JSON message: {'message': 'I just shared a meme! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:13:30 | INFO | Message received from author: Charlie
+2025-09-11 21:13:30 | INFO | Updated author counts: {'Charlie': 6, 'Eve': 5, 'Bob': 6, 'Alice': 5}
+2025-09-11 21:13:30 | INFO | Chart updated successfully for message: {"message": "I just shared a meme! It was boring.", "author": "Charlie"}
+
+2025-09-11 21:13:33 | INFO | {'message': 'I just found a trick! It was funny.', 'author': 'Bob'}
+2025-09-11 21:13:33 | INFO | Processed JSON message: {'message': 'I just found a trick! It was funny.', 'author': 'Bob'}
+2025-09-11 21:13:33 | INFO | Message received from author: Bob
+2025-09-11 21:13:33 | INFO | Updated author counts: {'Charlie': 6, 'Eve': 5, 'Bob': 7, 'Alice': 5}
+2025-09-11 21:13:33 | INFO | Chart updated successfully for message: {"message": "I just found a trick! It was funny.", "author": "Bob"}
+
+2025-09-11 21:13:36 | INFO | {'message': 'I just saw a movie! It was funny.', 'author': 'Eve'}
+2025-09-11 21:13:36 | INFO | Processed JSON message: {'message': 'I just saw a movie! It was funny.', 'author': 'Eve'}
+2025-09-11 21:13:36 | INFO | Message received from author: Eve
+2025-09-11 21:13:36 | INFO | Updated author counts: {'Charlie': 6, 'Eve': 6, 'Bob': 7, 'Alice': 5}
+2025-09-11 21:13:36 | INFO | Chart updated successfully for message: {"message": "I just saw a movie! It was funny.", "author": "Eve"}
+
+2025-09-11 21:13:39 | INFO | {'message': 'I just loved a story! It was amazing.', 'author': 'Alice'}
+2025-09-11 21:13:39 | INFO | Processed JSON message: {'message': 'I just loved a story! It was amazing.', 'author': 'Alice'}
+2025-09-11 21:13:39 | INFO | Message received from author: Alice
+2025-09-11 21:13:39 | INFO | Updated author counts: {'Charlie': 6, 'Eve': 6, 'Bob': 7, 'Alice': 6}
+2025-09-11 21:13:39 | INFO | Chart updated successfully for message: {"message": "I just loved a story! It was amazing.", "author": "Alice"}
+
+2025-09-11 21:13:42 | INFO | {'message': 'I just tried a movie! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:13:44 | INFO | Processed JSON message: {'message': 'I just tried a movie! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:13:44 | INFO | Message received from author: Bob
+2025-09-11 21:13:44 | INFO | Updated author counts: {'Charlie': 6, 'Eve': 6, 'Bob': 8, 'Alice': 6}
+2025-09-11 21:13:45 | INFO | Chart updated successfully for message: {"message": "I just tried a movie! It was amazing.", "author": "Bob"}
+
+2025-09-11 21:13:47 | INFO | {'message': 'I just found a story! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:13:47 | INFO | Processed JSON message: {'message': 'I just found a story! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:13:47 | INFO | Message received from author: Charlie
+2025-09-11 21:13:47 | INFO | Updated author counts: {'Charlie': 7, 'Eve': 6, 'Bob': 8, 'Alice': 6}
+2025-09-11 21:13:47 | INFO | Chart updated successfully for message: {"message": "I just found a story! It was boring.", "author": "Charlie"}
+
+2025-09-11 21:13:50 | INFO | {'message': 'I just found a trick! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:13:50 | INFO | Processed JSON message: {'message': 'I just found a trick! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:13:50 | INFO | Message received from author: Charlie
+2025-09-11 21:13:50 | INFO | Updated author counts: {'Charlie': 8, 'Eve': 6, 'Bob': 8, 'Alice': 6}
+2025-09-11 21:13:50 | INFO | Chart updated successfully for message: {"message": "I just found a trick! It was exciting.", "author": "Charlie"}
+
+2025-09-11 21:13:53 | INFO | {'message': 'I just saw an app! It was boring.', 'author': 'Eve'}
+2025-09-11 21:13:53 | INFO | Processed JSON message: {'message': 'I just saw an app! It was boring.', 'author': 'Eve'}
+2025-09-11 21:13:53 | INFO | Message received from author: Eve
+2025-09-11 21:13:53 | INFO | Updated author counts: {'Charlie': 8, 'Eve': 7, 'Bob': 8, 'Alice': 6}
+2025-09-11 21:13:53 | INFO | Chart updated successfully for message: {"message": "I just saw an app! It was boring.", "author": "Eve"}
+
+2025-09-11 21:13:56 | INFO | {'message': 'I just shared a trick! It was weird.', 'author': 'Eve'}
+2025-09-11 21:13:56 | INFO | Processed JSON message: {'message': 'I just shared a trick! It was weird.', 'author': 'Eve'}
+2025-09-11 21:13:56 | INFO | Message received from author: Eve
+2025-09-11 21:13:56 | INFO | Updated author counts: {'Charlie': 8, 'Eve': 8, 'Bob': 8, 'Alice': 6}
+2025-09-11 21:13:56 | INFO | Chart updated successfully for message: {"message": "I just shared a trick! It was weird.", "author": "Eve"}
+
+2025-09-11 21:13:59 | INFO | {'message': 'I just shared a meme! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:14:00 | INFO | Processed JSON message: {'message': 'I just shared a meme! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:14:00 | INFO | Message received from author: Charlie
+2025-09-11 21:14:00 | INFO | Updated author counts: {'Charlie': 9, 'Eve': 8, 'Bob': 8, 'Alice': 6}
+2025-09-11 21:14:00 | INFO | Chart updated successfully for message: {"message": "I just shared a meme! It was exciting.", "author": "Charlie"}
+
+2025-09-11 21:14:02 | INFO | {'message': 'I just found an app! It was funny.', 'author': 'Alice'}
+2025-09-11 21:14:02 | INFO | Processed JSON message: {'message': 'I just found an app! It was funny.', 'author': 'Alice'}
+2025-09-11 21:14:02 | INFO | Message received from author: Alice
+2025-09-11 21:14:02 | INFO | Updated author counts: {'Charlie': 9, 'Eve': 8, 'Bob': 8, 'Alice': 7}
+2025-09-11 21:14:02 | INFO | Chart updated successfully for message: {"message": "I just found an app! It was funny.", "author": "Alice"}
+
+2025-09-11 21:14:05 | INFO | {'message': 'I just loved a meme! It was exciting.', 'author': 'Alice'}
+2025-09-11 21:14:05 | INFO | Processed JSON message: {'message': 'I just loved a meme! It was exciting.', 'author': 'Alice'}
+2025-09-11 21:14:05 | INFO | Message received from author: Alice
+2025-09-11 21:14:05 | INFO | Updated author counts: {'Charlie': 9, 'Eve': 8, 'Bob': 8, 'Alice': 8}
+2025-09-11 21:14:05 | INFO | Chart updated successfully for message: {"message": "I just loved a meme! It was exciting.", "author": "Alice"}
+
+2025-09-11 21:14:08 | INFO | {'message': 'I just shared a movie! It was boring.', 'author': 'Eve'}
+2025-09-11 21:14:08 | INFO | Processed JSON message: {'message': 'I just shared a movie! It was boring.', 'author': 'Eve'}
+2025-09-11 21:14:08 | INFO | Message received from author: Eve
+2025-09-11 21:14:08 | INFO | Updated author counts: {'Charlie': 9, 'Eve': 9, 'Bob': 8, 'Alice': 8}
+2025-09-11 21:14:08 | INFO | Chart updated successfully for message: {"message": "I just shared a movie! It was boring.", "author": "Eve"}
+
+2025-09-11 21:14:11 | INFO | {'message': 'I just saw a movie! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:14:11 | INFO | Processed JSON message: {'message': 'I just saw a movie! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:14:11 | INFO | Message received from author: Bob
+2025-09-11 21:14:11 | INFO | Updated author counts: {'Charlie': 9, 'Eve': 9, 'Bob': 9, 'Alice': 8}
+2025-09-11 21:14:12 | INFO | Chart updated successfully for message: {"message": "I just saw a movie! It was amazing.", "author": "Bob"}
+
+2025-09-11 21:14:14 | INFO | {'message': 'I just shared a story! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:14:14 | INFO | Processed JSON message: {'message': 'I just shared a story! It was amazing.', 'author': 'Charlie'}
+2025-09-11 21:14:14 | INFO | Message received from author: Charlie
+2025-09-11 21:14:14 | INFO | Updated author counts: {'Charlie': 10, 'Eve': 9, 'Bob': 9, 'Alice': 8}
+2025-09-11 21:14:14 | INFO | Chart updated successfully for message: {"message": "I just shared a story! It was amazing.", "author": "Charlie"}
+
+2025-09-11 21:14:19 | INFO | {'message': 'I just found a meme! It was boring.', 'author': 'Alice'}
+2025-09-11 21:14:20 | INFO | Processed JSON message: {'message': 'I just found a meme! It was boring.', 'author': 'Alice'}
+2025-09-11 21:14:20 | INFO | Message received from author: Alice
+2025-09-11 21:14:20 | INFO | Updated author counts: {'Charlie': 10, 'Eve': 9, 'Bob': 9, 'Alice': 9}
+2025-09-11 21:14:20 | INFO | Chart updated successfully for message: {"message": "I just found a meme! It was boring.", "author": "Alice"}
+
+2025-09-11 21:14:22 | INFO | {'message': 'I just found a meme! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:14:23 | INFO | Processed JSON message: {'message': 'I just found a meme! It was weird.', 'author': 'Charlie'}
+2025-09-11 21:14:23 | INFO | Message received from author: Charlie
+2025-09-11 21:14:23 | INFO | Updated author counts: {'Charlie': 11, 'Eve': 9, 'Bob': 9, 'Alice': 9}
+2025-09-11 21:14:23 | INFO | Chart updated successfully for message: {"message": "I just found a meme! It was weird.", "author": "Charlie"}
+
+2025-09-11 21:14:25 | INFO | {'message': 'I just found a trick! It was exciting.', 'author': 'Eve'}
+2025-09-11 21:14:26 | INFO | Processed JSON message: {'message': 'I just found a trick! It was exciting.', 'author': 'Eve'}
+2025-09-11 21:14:26 | INFO | Message received from author: Eve
+2025-09-11 21:14:26 | INFO | Updated author counts: {'Charlie': 11, 'Eve': 10, 'Bob': 9, 'Alice': 9}
+2025-09-11 21:14:26 | INFO | Chart updated successfully for message: {"message": "I just found a trick! It was exciting.", "author": "Eve"}
+
+2025-09-11 21:14:28 | INFO | {'message': 'I just loved a story! It was funny.', 'author': 'Eve'}
+2025-09-11 21:14:28 | INFO | Processed JSON message: {'message': 'I just loved a story! It was funny.', 'author': 'Eve'}
+2025-09-11 21:14:28 | INFO | Message received from author: Eve
+2025-09-11 21:14:28 | INFO | Updated author counts: {'Charlie': 11, 'Eve': 11, 'Bob': 9, 'Alice': 9}
+2025-09-11 21:14:28 | INFO | Chart updated successfully for message: {"message": "I just loved a story! It was funny.", "author": "Eve"}
+
+2025-09-11 21:14:31 | INFO | {'message': 'I just found a story! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:14:31 | INFO | Processed JSON message: {'message': 'I just found a story! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:14:31 | INFO | Message received from author: Charlie
+2025-09-11 21:14:31 | INFO | Updated author counts: {'Charlie': 12, 'Eve': 11, 'Bob': 9, 'Alice': 9}
+2025-09-11 21:14:32 | INFO | Chart updated successfully for message: {"message": "I just found a story! It was exciting.", "author": "Charlie"}
+
+2025-09-11 21:14:34 | INFO | {'message': 'I just found a movie! It was boring.', 'author': 'Alice'}
+2025-09-11 21:14:35 | INFO | Processed JSON message: {'message': 'I just found a movie! It was boring.', 'author': 'Alice'}
+2025-09-11 21:14:35 | INFO | Message received from author: Alice
+2025-09-11 21:14:35 | INFO | Updated author counts: {'Charlie': 12, 'Eve': 11, 'Bob': 9, 'Alice': 10}
+2025-09-11 21:14:35 | INFO | Chart updated successfully for message: {"message": "I just found a movie! It was boring.", "author": "Alice"}
+
+2025-09-11 21:14:38 | INFO | {'message': 'I just tried a trick! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:14:38 | INFO | Processed JSON message: {'message': 'I just tried a trick! It was amazing.', 'author': 'Bob'}
+2025-09-11 21:14:38 | INFO | Message received from author: Bob
+2025-09-11 21:14:38 | INFO | Updated author counts: {'Charlie': 12, 'Eve': 11, 'Bob': 10, 'Alice': 10}
+2025-09-11 21:14:38 | INFO | Chart updated successfully for message: {"message": "I just tried a trick! It was amazing.", "author": "Bob"}
+
+2025-09-11 21:14:41 | INFO | {'message': 'I just loved a trick! It was exciting.', 'author': 'Bob'}
+2025-09-11 21:14:41 | INFO | Processed JSON message: {'message': 'I just loved a trick! It was exciting.', 'author': 'Bob'}
+2025-09-11 21:14:41 | INFO | Message received from author: Bob
+2025-09-11 21:14:41 | INFO | Updated author counts: {'Charlie': 12, 'Eve': 11, 'Bob': 11, 'Alice': 10}
+2025-09-11 21:14:41 | INFO | Chart updated successfully for message: {"message": "I just loved a trick! It was exciting.", "author": "Bob"}
+
+2025-09-11 21:14:44 | INFO | {'message': 'I just found a movie! It was exciting.', 'author': 'Eve'}
+2025-09-11 21:14:44 | INFO | Processed JSON message: {'message': 'I just found a movie! It was exciting.', 'author': 'Eve'}
+2025-09-11 21:14:44 | INFO | Message received from author: Eve
+2025-09-11 21:14:44 | INFO | Updated author counts: {'Charlie': 12, 'Eve': 12, 'Bob': 11, 'Alice': 10}
+2025-09-11 21:14:44 | INFO | Chart updated successfully for message: {"message": "I just found a movie! It was exciting.", "author": "Eve"}
+
+2025-09-11 21:14:47 | INFO | {'message': 'I just loved a movie! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:14:47 | INFO | Processed JSON message: {'message': 'I just loved a movie! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:14:47 | INFO | Message received from author: Charlie
+2025-09-11 21:14:47 | INFO | Updated author counts: {'Charlie': 13, 'Eve': 12, 'Bob': 11, 'Alice': 10}
+2025-09-11 21:14:47 | INFO | Chart updated successfully for message: {"message": "I just loved a movie! It was exciting.", "author": "Charlie"}
+
+2025-09-11 21:14:50 | INFO | {'message': 'I just found a movie! It was boring.', 'author': 'Alice'}
+2025-09-11 21:14:50 | INFO | Processed JSON message: {'message': 'I just found a movie! It was boring.', 'author': 'Alice'}
+2025-09-11 21:14:50 | INFO | Message received from author: Alice
+2025-09-11 21:14:50 | INFO | Updated author counts: {'Charlie': 13, 'Eve': 12, 'Bob': 11, 'Alice': 11}
+2025-09-11 21:14:50 | INFO | Chart updated successfully for message: {"message": "I just found a movie! It was boring.", "author": "Alice"}
+
+2025-09-11 21:14:55 | INFO | {'message': 'I just loved a story! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:14:55 | INFO | Processed JSON message: {'message': 'I just loved a story! It was boring.', 'author': 'Charlie'}
+2025-09-11 21:14:55 | INFO | Message received from author: Charlie
+2025-09-11 21:14:55 | INFO | Updated author counts: {'Charlie': 14, 'Eve': 12, 'Bob': 11, 'Alice': 11}
+2025-09-11 21:14:55 | INFO | Chart updated successfully for message: {"message": "I just loved a story! It was boring.", "author": "Charlie"}
+
+2025-09-11 21:14:58 | INFO | {'message': 'I just loved an app! It was weird.', 'author': 'Alice'}
+2025-09-11 21:14:58 | INFO | Processed JSON message: {'message': 'I just loved an app! It was weird.', 'author': 'Alice'}
+2025-09-11 21:14:58 | INFO | Message received from author: Alice
+2025-09-11 21:14:58 | INFO | Updated author counts: {'Charlie': 14, 'Eve': 12, 'Bob': 11, 'Alice': 12}
+2025-09-11 21:14:58 | INFO | Chart updated successfully for message: {"message": "I just loved an app! It was weird.", "author": "Alice"}
+
+2025-09-11 21:15:01 | INFO | {'message': 'I just found a movie! It was funny.', 'author': 'Alice'}
+2025-09-11 21:15:01 | INFO | Processed JSON message: {'message': 'I just found a movie! It was funny.', 'author': 'Alice'}
+2025-09-11 21:15:01 | INFO | Message received from author: Alice
+2025-09-11 21:15:01 | INFO | Updated author counts: {'Charlie': 14, 'Eve': 12, 'Bob': 11, 'Alice': 13}
+2025-09-11 21:15:01 | INFO | Chart updated successfully for message: {"message": "I just found a movie! It was funny.", "author": "Alice"}
+
+2025-09-11 21:15:04 | INFO | {'message': 'I just shared a meme! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:15:04 | INFO | Processed JSON message: {'message': 'I just shared a meme! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:15:04 | INFO | Message received from author: Charlie
+2025-09-11 21:15:04 | INFO | Updated author counts: {'Charlie': 15, 'Eve': 12, 'Bob': 11, 'Alice': 13}
+2025-09-11 21:15:04 | INFO | Chart updated successfully for message: {"message": "I just shared a meme! It was exciting.", "author": "Charlie"}
+
+2025-09-11 21:15:07 | INFO | {'message': 'I just loved a movie! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:15:07 | INFO | Processed JSON message: {'message': 'I just loved a movie! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:15:07 | INFO | Message received from author: Charlie
+2025-09-11 21:15:07 | INFO | Updated author counts: {'Charlie': 16, 'Eve': 12, 'Bob': 11, 'Alice': 13}
+2025-09-11 21:15:07 | INFO | Chart updated successfully for message: {"message": "I just loved a movie! It was exciting.", "author": "Charlie"}
+
+2025-09-11 21:15:10 | INFO | {'message': 'I just found a story! It was boring.', 'author': 'Eve'}
+2025-09-11 21:15:10 | INFO | Processed JSON message: {'message': 'I just found a story! It was boring.', 'author': 'Eve'}
+2025-09-11 21:15:10 | INFO | Message received from author: Eve
+2025-09-11 21:15:10 | INFO | Updated author counts: {'Charlie': 16, 'Eve': 13, 'Bob': 11, 'Alice': 13}
+2025-09-11 21:15:10 | INFO | Chart updated successfully for message: {"message": "I just found a story! It was boring.", "author": "Eve"}
+
+2025-09-11 21:15:13 | INFO | {'message': 'I just tried an app! It was funny.', 'author': 'Alice'}
+2025-09-11 21:15:13 | INFO | Processed JSON message: {'message': 'I just tried an app! It was funny.', 'author': 'Alice'}
+2025-09-11 21:15:13 | INFO | Message received from author: Alice
+2025-09-11 21:15:13 | INFO | Updated author counts: {'Charlie': 16, 'Eve': 13, 'Bob': 11, 'Alice': 14}
+2025-09-11 21:15:13 | INFO | Chart updated successfully for message: {"message": "I just tried an app! It was funny.", "author": "Alice"}
+
+2025-09-11 21:15:16 | INFO | {'message': 'I just tried a story! It was funny.', 'author': 'Bob'}
+2025-09-11 21:15:16 | INFO | Processed JSON message: {'message': 'I just tried a story! It was funny.', 'author': 'Bob'}
+2025-09-11 21:15:16 | INFO | Message received from author: Bob
+2025-09-11 21:15:16 | INFO | Updated author counts: {'Charlie': 16, 'Eve': 13, 'Bob': 12, 'Alice': 14}
+2025-09-11 21:15:16 | INFO | Chart updated successfully for message: {"message": "I just tried a story! It was funny.", "author": "Bob"}
+
+2025-09-11 21:15:19 | INFO | {'message': 'I just tried an app! It was funny.', 'author': 'Charlie'}
+2025-09-11 21:15:19 | INFO | Processed JSON message: {'message': 'I just tried an app! It was funny.', 'author': 'Charlie'}
+2025-09-11 21:15:19 | INFO | Message received from author: Charlie
+2025-09-11 21:15:19 | INFO | Updated author counts: {'Charlie': 17, 'Eve': 13, 'Bob': 12, 'Alice': 14}
+2025-09-11 21:15:19 | INFO | Chart updated successfully for message: {"message": "I just tried an app! It was funny.", "author": "Charlie"}
+
+2025-09-11 21:15:22 | INFO | {'message': 'I just found a movie! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:15:22 | INFO | Processed JSON message: {'message': 'I just found a movie! It was exciting.', 'author': 'Charlie'}
+2025-09-11 21:15:22 | INFO | Message received from author: Charlie
+2025-09-11 21:15:22 | INFO | Updated author counts: {'Charlie': 18, 'Eve': 13, 'Bob': 12, 'Alice': 14}
