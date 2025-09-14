@@ -1,292 +1,140 @@
-# buzzline-04-case
-
-We can analyze and visualize different types of streaming data as the information arrives.
-
-The producers don't change from buzzline-03-case - they write the same information to a Kafka topic, except the csv producer for the smart smoker has been modified to not run continuously. It will stop after reading all the rows in the CSV file.
-The consumers have been enhanced to add visualization.
-
-This project uses **matplotlib** and its animation capabilities for visualization.
-
-It generates three applications:
-
-1. A basic producer and consumer that exchange information via a dynamically updated file.
-2. A JSON producer and consumer that exchange information via a Kafka topic.
-3. A CSV producer and consumer that exchange information via a different Kafka topic.
-
-All three applications produce live charts to illustrate the data.
-
-## First, Use Tools from Module 1 and 2
-
-Before starting, ensure you have completed the setup tasks in <https://github.com/denisecase/buzzline-01-case> and <https://github.com/denisecase/buzzline-02-case> first.
-**Python 3.11 is required.**
-
-## Second, Copy This Example Project & Rename
-
-1. Once the tools are installed, copy/fork this project into your GitHub account
-   and create your own version of this project to run and experiment with.
-2. Name it `buzzline-04-yourname` where yourname is something unique to you.
-
-Additional information about our standard professional Python project workflow is available at
-<https://github.com/denisecase/pro-analytics-01>.
-
-Use your README.md to record your workflow and commands.
+# Buzzline Project - Gospel Message Analysis
+## Project Overview
+This project analyzes streaming JSON messages to detect and visualize gospel content and evangelistic opportunities. Inspired by bold Christian leaders like Charlie Kirk, it encourages believers to be intentional and outspoken in sharing their faith through digital communications.
 
 ---
 
-## Task 0. If Windows, Start WSL
+##🔥 Gospel Message Analyzer Consumer
+What It Does
+The Gospel Message Analyzer processes real-time JSON messages to:
 
-Launch WSL. Open a PowerShell terminal in VS Code. Run the following command:
+Detect Gospel Content: Scans for Christian keywords (salvation, Jesus, faith, scripture, grace, witness, truth, eternity)
+Measure Bold Witness: Identifies high-impact gospel messages with positive sentiment
+Find Evangelistic Opportunities: Detects messages expressing struggle, seeking, or spiritual questions
+Track Ministry Effectiveness: Provides real-time metrics on gospel sharing success
+Encourage Boldness: Biblical inspiration and challenges to share Christ more intentionally
 
-```powershell
-wsl
-```
-
-You should now be in a Linux shell (prompt shows something like `username@DESKTOP:.../repo-name$`).
-
-Do **all** steps related to starting Kafka in this WSL window.
-
----
-
-## Task 1. Start Kafka (using WSL if Windows)
-
-In P2, you downloaded, installed, configured a local Kafka service.
-Before starting, run a short prep script to ensure Kafka has a persistent data directory and meta.properties set up. This step works on WSL, macOS, and Linux - be sure you have the $ prompt and you are in the root project folder.
-
-1. Make sure the script is executable.
-2. Run the shell script to set up Kafka.
-3. Cd (change directory) to the kafka directory.
-4. Start the Kafka server in the foreground.
-5. Keep this terminal open - Kafka will run here
-6. Watch for "started (kafka.server.KafkaServer)" message
-
-```bash
-chmod +x scripts/prepare_kafka.sh
-scripts/prepare_kafka.sh
-cd ~/kafka
-bin/kafka-server-start.sh config/kraft/server.properties
-```
-
-**Keep this terminal open!** Kafka is running and needs to stay active.
-
-For detailed instructions, see [SETUP_KAFKA](https://github.com/denisecase/buzzline-02-case/blob/main/SETUP_KAFKA.md) from Project 2. 
+Insight Focus
+Gospel Message Analysis and Digital Evangelism Effectiveness
+"Therefore go and make disciples of all nations..." - Matthew 28:19
+This analysis helps believers understand their digital witness impact, identify missed opportunities for gospel conversations, and encourages more intentional Christian testimony online.
 
 ---
 
-## Task 2. Manage Local Project Virtual Environment
+## Visualization Types
 
-Open your project in VS Code and use the commands for your operating system to:
+Line Charts: Gospel content scores and faith impact trends over time
+Bar Charts: Top gospel keywords, ministry impact metrics, evangelistic effectiveness percentages
+Real-time Dashboard: Live statistics with biblical inspiration and bold witness challenges
 
-1. Create a Python virtual environment
-2. Activate the virtual environment
-3. Upgrade pip
-4. Install from requirements.txt
-
-### Windows
-
-Open a new PowerShell terminal in VS Code (Terminal / New Terminal / PowerShell).
-
-```powershell
-py -3.11 -m venv .venv
-.venv\Scripts\Activate.ps1
-py -m pip install --upgrade pip wheel setuptools
-py -m pip install --upgrade -r requirements.txt
-```
-
-If you get execution policy error, run this first:
-`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
-
-### Mac / Linux
-
-Open a new terminal in VS Code (Terminal / New Terminal)
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade -r requirements.txt
-```
+Why This is Interesting: Shows both immediate gospel opportunities and long-term evangelistic effectiveness, helping believers become more strategic and bold in their digital witness like Charlie Kirk and other outspoken Christian leaders.
+Required Project Setup
+Environment Setup
+bash# Create and activate virtual environment
+python -m venv .venv
 
 ---
 
-## Task 3. Start a Basic (File-based, not Kafka) Streaming Application
-
-This will take two terminals:
-
-1. One to run the producer which writes to a file in the data folder.
-2. Another to run the consumer which reads from the dynamically updated file.
-
-### Producer Terminal
-
-Start the producer to generate the messages.
-
-In VS Code, open a NEW terminal.
-Use the commands below to activate .venv, and start the producer.
-
-Windows:
-
-```shell
+## Windows
 .venv\Scripts\activate
-py -m producers.basic_json_producer_case
-```
 
-Mac/Linux:
-
-```zsh
+## Linux/Mac
 source .venv/bin/activate
-python3 -m producers.basic_json_producer_case
-```
 
-### Consumer Terminal
-
-Start the associated consumer that will process and visualize the messages.
-
-In VS Code, open a NEW terminal in your root project folder.
-Use the commands below to activate .venv, and start the consumer.
-
-Windows:
-
-```shell
-.venv\Scripts\activate
-py -m consumers.basic_json_consumer_case
-```
-
-Mac/Linux:
-
-```zsh
-source .venv/bin/activate
-python3 -m consumers.basic_json_consumer_case
-```
-
-### Review the Application Code
-
-Review the code for both the producer and the consumer.
-Understand how the information is generated, written to a file, and read and processed.
-Review the visualization code to see how the live chart is produced.
-When done, remember to kill the associated terminals for the producer and consumer.
+## Install required packages
+pip install -r requirements.txt
 
 ---
 
-## Task 4. Start a (Kafka-based) JSON Streaming Application
+## Running the Project
 
-This will take two terminals:
+Step 1: Start the Required Producer
 
-1. One to run the producer which writes to a Kafka topic.
-2. Another to run the consumer which reads from that Kafka topic.
+The project uses the provided producer without any modifications:
+bash# Run the basic JSON producer (generates sample messages)
+python -m producers.basic_json_producer_case
+This will start generating JSON messages to the data/buzz_live.json file with the format:
+json{
+    "message": "I just shared a movie! It was amazing.",
+    "author": "Charlie",
+    "timestamp": "2025-01-29 14:35:20",
+    "category": "humor",
+    "sentiment": 0.87,
+    "keyword_mentioned": "movie",
+    "message_length": 42
+}
 
-For each one, you will need to:
+Step 2: Run a Consumer
 
-1. Open a new terminal.
-2. Activate your .venv.
-3. Know the command that works on your machine to execute python (e.g. py or python3).
-4. Know how to use the -m (module flag to run your file as a module).
-5. Know the full name of the module you want to run.
-   - Look in the producers folder for json_producer_case.
-   - Look in the consumers folder for json_consumer_case.
+Option A: Original Basic Consumer (Provided Example)
+To run the original basic consumer that counts messages by author:
+bash# In a new terminal window (keep producer running)
+python -m consumers.basic_json_consumer_case
+This will display a live bar chart showing message counts by author.
 
-### Review the Application Code
+Option B: New Gospel Message Analyzer Consumer
+To run the new gospel-focused consumer:
+bash# In a new terminal window (keep producer running)
+python -m consumers.project_consumer_gospel
+Then open your browser and navigate to:
 
-Review the code for both the producer and the consumer.
-Understand how the information is generated and written to a Kafka topic, and consumed from the topic and processed.
-Review the visualization code to see how the live chart is produced.
+Dashboard: gospel_dashboard.html (auto-refreshes every 3 seconds)
+Charts: Will be saved in charts/gospel_analysis.png
 
-Compare the non-Kafka JSON streaming application to the Kafka JSON streaming application.
-By organizing code into reusable functions, which functions can be reused?
-Which functions must be updated based on the sharing mechanism?
-What new functions/features must be added to work with a Kafka-based streaming system?
+Expected Output
+Console Output
+🔥 Starting Gospel Message Analyzer Consumer
+💪 Inspired by bold faith leaders like Charlie Kirk
+📖 Monitoring file: data\buzz_live.json
+✝️ Open gospel_dashboard.html to see live gospel analysis
+🚀 Be bold in sharing your faith!
+--------------------------------------------------
+📖 Message #1 - Gospel Score: 0.40, Impact: 0.35, Author: Charlie
+🔥 STRONG GOSPEL MESSAGE detected from Alice!
+Dashboard Features
 
-When done, remember to kill the associated terminals for the producer and consumer.
+Live Statistics: Total messages, gospel messages, bold witness count, evangelistic opportunities
+Visual Charts: Real-time gospel content analysis with biblical themes
+Encouragement: Scripture verses and challenges to be bold in faith
+Ministry Metrics: Effectiveness percentages and trending analysis
 
----
+message: Text content analyzed for gospel keywords
+author: Tracks who is sharing gospel content
+sentiment: Combined with gospel score for faith impact calculation
+timestamp: Used for time-series analysis
 
-## Task 5. Start a (Kafka-based) CSV Streaming Application
+Special Data Structures
 
-This will take two terminals:
+Gospel Keywords Dictionary: 8 categories with related terms
+Time Series Deques: Gospel scores and faith impact over time
+Author Set: Tracks unique individuals sharing gospel content
+Keyword Counters: Frequency analysis of Christian terms
 
-1. One to run the producer which writes to a Kafka topic.
-2. Another to run the consumer which reads from that Kafka topic.
+Processing Logic
 
-For each one, you will need to:
+Gospel Score Calculation: Analyzes message for Christian keywords (0-1 scale)
+Faith Impact Measurement: Combines gospel content with positive sentiment
+Evangelistic Opportunity Detection: Identifies struggles, questions, or spiritual seeking
+Bold Witness Tracking: High gospel score + positive sentiment (Charlie Kirk style)
 
-1. Open a new terminal.
-2. Activate your .venv.
-3. Know the command that works on your machine to execute python (e.g. py or python3).
-4. Know how to use the -m (module flag to run your file as a module).
-5. Know the full name of the module you want to run.
-   - Look in the producers folder for csv_producer_case.
-   - Look in the consumers folder for csv_consumer_case.
+Biblical Foundation
+"How beautiful are the feet of those who bring good news!" - Romans 10:15
+"For I am not ashamed of the gospel, because it is the power of God that brings salvation to everyone who believes." - Romans 1:16
+This tool encourages believers to be intentional, strategic, and bold in sharing Christ through digital communications.
+Troubleshooting
+Common Issues
 
-### Review the Application Code
+No charts appearing: Make sure you have matplotlib installed and are opening the HTML dashboard
+File not found errors: Ensure the producer is running first to create the data file
+Import errors: Verify all packages are installed with pip install -r requirements.txt
 
-Review the code for both the producer and the consumer.
-Understand how the information is generated and written to a Kafka topic, and consumed from the topic and processed.
-Review the visualization code to see how the live chart is produced.
+Platform-Specific Notes
 
-Compare the JSON application to the CSV streaming application.
-By organizing code into reusable functions, which functions can be reused?
-Which functions must be updated based on the type of data?
-How does the visualization code get changed based on the type of data and type of chart used?
-Which aspects are similar between the different types of data?
+Windows: Use python -m commands as shown
+WSL/Linux: May need python3 instead of python
+Chart Display: Dashboard works in any web browser; no special setup needed
 
-When done, remember to kill the associated terminals for the producer and consumer.
+Be Bold Challenge
+Use this tool to challenge yourself and your community to be more like Charlie Kirk and other bold Christian leaders - unashamed, intentional, and effective in sharing the gospel in every digital conversation!
 
-## Possible Explorations
-
-- JSON: Process messages in batches of 5 messages.
-- JSON:Limit the display to the top 3 authors.
-- Modify chart appearance.
-- Stream a different set of data and visualize the custom stream with an appropriate chart.
-- How do we find out what types of charts are available?
-- How do we find out what attributes and colors are available?
-
----
-
-## How To Stop a Continuous Process
-
-To kill the terminal, hit CTRL c (hold both CTRL key and c key down at the same time).
-
-## Later Work Sessions
-
-When resuming work on this project:
-
-1. Open the project repository folder in VS Code. 
-2. Start the Kafka service (use WSL if Windows) and keep the terminal running. 
-3. Activate your local project virtual environment (.venv) in your OS-specific terminal.
-4. Run `git pull` to get any changes made from the remote repo (on GitHub).
-
-## After Making Useful Changes
-
-1. Git add everything to source control (`git add .`)
-2. Git commit with a -m message.
-3. Git push to origin main.
-
-```shell
-git add .
-git commit -m "your message in quotes"
-git push -u origin main
-```
-
-## Save Space
-
-To save disk space, you can delete the .venv folder when not actively working on this project.
-You can always recreate it, activate it, and reinstall the necessary packages later.
-Managing Python virtual environments is a valuable skill.
-
-## License
-
-This project is licensed under the MIT License as an example project.
-You are encouraged to fork, copy, explore, and modify the code as you like.
-See the [LICENSE](LICENSE.txt) file for more.
-
-## Live Chart Examples
-
-Live Bar Chart (JSON file streaming)
-
-![Basic JSON (file-exchange)](images/live_bar_chart_basic_example.jpg)
-
-Live Bar Chart (Kafka JSON streaming)
-
-![JSON (Kafka)](images/live_bar_chart_example.jpg)
-
-Live Line Chart with Alert (Kafka CSV streaming)
-
-![CSV (Kafka)](images/live_line_chart_example.jpg)
+"And he said to them, 'Go into all the world and proclaim the gospel to the whole creation.'" - Mark 16:15
