@@ -4,7 +4,7 @@ This project analyzes streaming JSON messages to detect and visualize gospel con
 
 ---
 
-##🔥 Gospel Message Analyzer Consumer
+## Gospel Message Analyzer Consumer
 What It Does
 The Gospel Message Analyzer processes real-time JSON messages to:
 
