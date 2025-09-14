@@ -81,14 +81,17 @@ Then open your browser and navigate to:
 Dashboard: gospel_dashboard.html (auto-refreshes every 3 seconds)
 Charts: Will be saved in charts/gospel_analysis.png
 
-Expected Output
-Console Output
+---
+
+## Expected Output
+## Console Output
+
 🔥 Starting Gospel Message Analyzer Consumer
 💪 Inspired by bold faith leaders like Charlie Kirk
 📖 Monitoring file: data\buzz_live.json
 ✝️ Open gospel_dashboard.html to see live gospel analysis
 🚀 Be bold in sharing your faith!
---------------------------------------------------
+
 📖 Message #1 - Gospel Score: 0.40, Impact: 0.35, Author: Charlie
 🔥 STRONG GOSPEL MESSAGE detected from Alice!
 Dashboard Features
