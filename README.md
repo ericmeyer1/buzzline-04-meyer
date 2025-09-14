@@ -51,8 +51,8 @@ pip install -r requirements.txt
 Step 1: Start the Required Producer
 
 The project uses the provided producer without any modifications:
-bash# Run the basic JSON producer (generates sample messages)
-python -m producers.basic_json_producer_case
+bash# Run the basic project producer (generates sample messages)
+python -m producers.project_producer_case
 This will start generating JSON messages to the data/buzz_live.json file with the format:
 json{
     "message": "I just shared a movie! It was amazing.",
